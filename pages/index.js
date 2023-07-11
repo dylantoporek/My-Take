@@ -1,8 +1,12 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
+import { ChakraProvider } from '@chakra-ui/react'
+import HomePage from './HomePage'
+import Navbar from '../components/Navbar/Navbar';
 
-export default function Home() {
+export default function Index() {
   return (
+    <ChakraProvider>
     <div className={styles.container}>
       <Head>
         <title>My Take</title>
@@ -10,7 +14,9 @@ export default function Home() {
       </Head>
 
       <main>
-        <h1 className={styles.title}>
+        <Navbar/>
+        <HomePage/>
+        {/* <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
 
@@ -19,6 +25,7 @@ export default function Home() {
         </p>
 
         <div className={styles.grid}>
+
           <a href="https://nextjs.org/docs" className={styles.card}>
             <h3>Documentation &rarr;</h3>
             <p>Find in-depth information about Next.js features and API.</p>
@@ -46,10 +53,11 @@ export default function Home() {
               Instantly deploy your Next.js site to a public URL with Vercel.
             </p>
           </a>
-        </div>
+        </div> */}
+
       </main>
 
-      <footer>
+      {/* <footer>
         <a
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
           target="_blank"
@@ -58,24 +66,22 @@ export default function Home() {
           Powered by{' '}
           <img src="/vercel.svg" alt="Vercel" className={styles.logo} />
         </a>
-      </footer>
+      </footer> */}
 
       <style jsx>{`
         main {
-          padding: 5rem 0;
-          flex: 1;
+          position: absolute;
+          width: 100%;
+          height: 100%;
           display: flex;
           flex-direction: column;
-          justify-content: center;
-          align-items: center;
+          border: 8px solid green
         }
         footer {
           width: 100%;
           height: 100px;
           border-top: 1px solid #eaeaea;
           display: flex;
-          justify-content: center;
-          align-items: center;
         }
         footer img {
           margin-left: 0.5rem;
@@ -111,5 +117,6 @@ export default function Home() {
         }
       `}</style>
     </div>
+    </ChakraProvider>
   )
 }
