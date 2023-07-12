@@ -10,7 +10,7 @@ export default function Index() {
     <div className={styles.container}>
       <Head>
         <title>My Take</title>
-        <link rel="icon" href="/New_Project.png" />
+        <link rel="icon" href="/logo.png" />
       </Head>
 
       <main>
