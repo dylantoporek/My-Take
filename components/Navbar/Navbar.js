@@ -4,9 +4,18 @@ import logo from '../../public/New_Project.png'
 
 function Navbar(){
     return (
-        <Stack>
-            <Flex>
-                <Image src={logo}/>
+        <Stack p={8}>
+            <Flex justifyContent={'space-between'}>
+                <Flex>
+                    <Image src={logo}/>
+                </Flex>
+                <Flex gap={2}>
+                    <Text>Menus</Text>
+                    <Text>About Us</Text>
+                    <Text>Reservations</Text>
+                    <Text>Hours & Location</Text>
+                    <Text>Merch</Text>
+                </Flex>
             </Flex>
         </Stack>
     )
