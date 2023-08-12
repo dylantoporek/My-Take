@@ -1,20 +1,27 @@
 import React from "react";
 import {Flex, Stack, Text, Image} from '@chakra-ui/react'
-import logo from '../../public/New_Project.png'
 
 function Navbar(){
+    const navList = [
+        'Menus', 'About Us', 'Reservations', 'Hours & Location', 'Merch'
+    ]
     return (
         <Stack p={8}>
             <Flex justifyContent={'space-between'}>
                 <Flex>
-                    <Image src={logo}/>
+                    <Image maxW={'200px'} src={'New_Project.png'}/>
                 </Flex>
-                <Flex gap={2}>
-                    <Text>Menus</Text>
-                    <Text>About Us</Text>
-                    <Text>Reservations</Text>
-                    <Text>Hours & Location</Text>
-                    <Text>Merch</Text>
+                <Flex 
+                    fontStyle={'italic'} 
+                    fontWeight={'bolder'} 
+                    gap={10}>
+                    {navList.map((item) => {
+                        return (
+                            <Text cursor={'pointer'}>
+                                {item}
+                            </Text>
+                        )
+                    })}
                 </Flex>
             </Flex>
         </Stack>
