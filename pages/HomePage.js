@@ -1,11 +1,12 @@
 import React from 'react'
 import {Stack, Flex, Text} from '@chakra-ui/react'
-
+import Carousel from '../components/Carousel/Carousel'
 function HomePage(){
+
     return (
         <Stack>
-            <Flex>
-                <Text>Home Page Trail</Text>
+            <Flex justifyContent={'center'}>
+                <Carousel />
             </Flex>
         </Stack>
     )

@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
-import { ChakraProvider } from '@chakra-ui/react'
+import { ChakraProvider, Flex, Stack } from '@chakra-ui/react'
 import HomePage from './HomePage'
 import Navbar from '../components/Navbar/Navbar';
 
@@ -14,8 +14,17 @@ export default function Index() {
       </Head>
 
       <main>
-        <Navbar/>
-        <HomePage/>
+        <Stack 
+          h={'100%'} 
+          w={'100%'} 
+         border={'5px solid green'}
+         borderRadius={'2px'}>
+         <Flex flexDir={'column'}>
+            <Navbar/>
+            <HomePage/>
+          </Flex>
+        </Stack>
+        
         {/* <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
@@ -75,7 +84,6 @@ export default function Index() {
           height: 100%;
           display: flex;
           flex-direction: column;
-          border: 8px solid green
         }
         footer {
           width: 100%;
